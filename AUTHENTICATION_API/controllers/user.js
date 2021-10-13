@@ -1,16 +1,16 @@
-const db = require("../models/connect")
+const db = require('../models/connect')
 const { sendEmailValidCode } = require('../email/valid')
 var moment = require('moment')
 const jwt = require('jsonwebtoken')
 const axios = require('axios')
-const e = require("express")
+const e = require('express')
 const User = db.User
 const Token = db.Token
 const Op = db.Sequelize.Op
 const Sequelize = db.Sequelize
 
 
-const BASE_LINK = "http://localhost:3001"  // module 2
+const BASE_LINK = 'http://localhost:3001'  // CONTACT_API
 
 
 exports.create = (async (req, resp) => {
