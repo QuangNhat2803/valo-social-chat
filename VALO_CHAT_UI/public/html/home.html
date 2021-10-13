@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>BUVAPE HOME</title>
+    <title>VALO HOME</title>
     <link rel="stylesheet" type="text/css" href="css/home.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
     <link rel="stylesheet" type="text/css"
@@ -22,10 +22,10 @@
 
         <div class="chat">
             <div class="sidebar_menu_content">
-                <a id="btnUser" href="javascript:void(0)"><img class="ic_owner" src="assets/img/user1-avatar.png" alt="member1-avatar"></a>
+                <a id="btnUser" href="javascript:void(0)"><img class="ic_owner" src="assets/img/user2-avatar.jpg" alt="member1-avatar"></a>
                 <a class="active_current" href="home"><i class="fa fa-fw fa-telegram"></i></a>
                 <a href="contact"><i class="fa fa-fw fa-address-book-o"></i></a>
-                <a id="logout" href="#"><i class="fa fa-fw fa-cogs"></i></a>
+                <a id="logout" href="logout"><i class="fa fa-fw fa-cogs"></i></a>
             </div>
 
             <!-- Sidebar -->
@@ -54,31 +54,21 @@
 
             <div class="dialog" id="gioithieu">
                 <p style="font-size: 22px;text-align: center;color: rgb(61, 60, 60);margin-top:50px">Chào mừng đến với
-                    <strong>BUVAPE PC</strong></p>
+                    <strong>VALO PC</strong></p>
                 <p style="text-align: center;margin-top:20px">Khám phá những tiện ích hỗ trợ làm việc và trò chuyện cùng
                     người thân, bạn bè được tối ưu hoá cho máy tính của bạn.</p>
 
-                <div class="swiper-container">
+                <div class="swiper-container" style="margin-top: 50px; margin-left: 250px;">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide"><img
-                                src="https://zalo-chat-static.zadn.vn/v1/inapp-welcome-screen-02.jpg" width="60%"
+                                src="https://marketplace-assets-production.s3-us-west-2.amazonaws.com/vault/items/preview-5785a53b-a37c-41fd-8bc4-684d0a14153b-Nzorn.jpg" width="60%"
                                 height="60%">
-                            <div class="title" id="title_1">Chat nhóm với đồng nghiệp</div>
+                            <div class="title" id="title_1"></div>
                         </div>
                         <div class="swiper-slide"><img
-                                src="https://zalo-chat-static.zadn.vn/v1/inapp-welcome-screen-01.jpg" width="60%"
+                                src="https://previews.123rf.com/images/bsvit/bsvit1911/bsvit191100008/135500819-young-people-use-smartphones-and-chatting-in-messenger-or-social-network-social-media-chat-and-commu.jpg" width="60%"
                                 height="60%">
-                            <div class="title" id="title_2">Giải quyết công việc hiệu quả hơn</div>
-                        </div>
-                        <div class="swiper-slide"><img
-                                src="https://zalo-chat-static.zadn.vn/v1/inapp-welcome-screen-0.jpg" width="60%"
-                                height="60%">
-                            <div class="title" id="title_2">Giải quyết và làm việc hiệu quả</div>
-                        </div>
-                        <div class="swiper-slide"><img
-                                src="https://zalo-chat-static.zadn.vn/v1/inapp-welcome-screen-04.jpg" width="60%"
-                                height="60%">
-                            <div class="title" id="title_2">Trải nghiệm xuyên suốt</div>
+                            <div class="title" id="title_2"></div>
                         </div>
                     </div>
 
@@ -161,7 +151,7 @@
 
 
     
-    <script id="headermbh" type="text/x-handlebars-template">
+    <!-- <script id="headermbh" type="text/x-handlebars-template">
         {{#each objects}}
             <div name="{{firstname}} {{lastname}}" class="dialog-item" onclick="chatMessage(this,{{id}})">
                 <img class="dialog-item__avatar"
@@ -175,7 +165,7 @@
             </div>
         {{/each}}
 
-    </script>
+    </script> -->
 
     <script id="friend_group" type="text/x-handlebars-template">
         {{#each objects}}
@@ -515,14 +505,14 @@
         });
     </script>
 
-    <script>
+    <!-- <script>
         onTransitionStart: function () {
             $(".swiper-slide div.title").hide();
         },
         onTransitionEnd: function (mySwiper) {
             $("#title_" + mySwiper.activeIndex).show("slow");
         }
-    </script>
+    </script> -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.js"></script>
     <script src="js/home.js"></script>
 
