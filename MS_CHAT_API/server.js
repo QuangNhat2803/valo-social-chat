@@ -1,9 +1,10 @@
+require('dotenv').config({ path: __dirname + '/.env' });
 const express = require('express')
 const db = require("./utils/dynamodb")
 const http = require('http')
 const app = express()
 const server = http.createServer(app)
-const port = process.env.PORT || 3002
+const port = 3002
 const io = require('socket.io')(server)
 
 app.use((req, res, next) => {

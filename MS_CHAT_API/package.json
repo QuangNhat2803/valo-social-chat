@@ -10,13 +10,14 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "aws-sdk": "^2.1013.0",
-    "axios": "^0.23.0",
+    "dotenv": "^10.0.0",
+    "aws-sdk": "^2.792.0",
+    "axios": "^0.21.0",
     "express": "^4.17.1",
-    "mysql2": "^2.3.2",
-    "sequelize": "^6.7.0",
-    "socket.io": "^4.3.1",
-    "uuid": "^8.3.2"
+    "mysql2": "^2.2.5",
+    "sequelize": "^6.3.5",
+    "socket.io": "^2.3.0",
+    "uuid": "^8.3.1"
   },
   "devDependencies": {
     "nodemon": "^2.0.14"
