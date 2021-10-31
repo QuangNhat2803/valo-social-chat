@@ -1,14 +1,14 @@
 const sgMail = require('@sendgrid/mail')
-sgMail.setApiKey('Your key')
+sgMail.setApiKey('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')
 
 const sendEmailValidCode = async(email,name) => {
     await sgMail.send({
         'to' : email,
         'from' : {
-            'email' : 'youremail@gmail.com',
+            'email' : 'nvtamnt99@gmail.com',
             'name': 'VALO'
         },
-        'templateId' : 'd-57cd636c58744d65ba9999e76e64b2b2',
+        'templateId' : 'd-44d48d4f0a824808aa40fdd13a8f1a49',
         'dynamicTemplateData': {
             'subject': "Xác thực tài khoản Valo",
             'email' : email,

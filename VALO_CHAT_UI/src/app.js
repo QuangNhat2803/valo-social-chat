@@ -70,8 +70,6 @@ app.use(userRouter)
 // Admin
 app.use(adminRouter)
 
-require("./routes/loginqr")(app,io,publicPath)
-
 
 server.listen(port, () => {
     console.log(`listen host ${port}`)

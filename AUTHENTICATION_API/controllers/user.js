@@ -30,7 +30,7 @@ exports.create = (async (req, resp) => {
 // Signup phone
 // post /phone -----
 exports.phone = (async (req, resp) => {
-    const trickMailCode = "support_" + Math.floor(100000 + Math.random() * 900000) + "_" + Math.floor(100000 + Math.random() * 900000) + "@bupvapechat.com"
+    const trickMailCode = "support_" + Math.floor(100000 + Math.random() * 900000) + "_" + Math.floor(100000 + Math.random() * 900000) + "@valochat.com"
     const phone = req.body.phone
     const email = trickMailCode
     console.log(email)
