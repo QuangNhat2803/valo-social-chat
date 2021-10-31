@@ -1,5 +1,6 @@
 require('dotenv').config({ path: __dirname + '/.env' });
 const express = require('express')
+const db = require("./utils/dynamodb")
 const http = require('http')
 const app = express()
 const server = http.createServer(app)
