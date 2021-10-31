@@ -3,9 +3,7 @@ module.exports = app => {
 
     var router = require("express").Router();
     router.post("/mail", users.create)
-    router.post("/phone", users.phone)
     router.get("/mail/:gm/:code", users.validcode)
-    router.get("/phone/:num", users.phoneValid)
     router.post("/users", users.addmoreinfo)
     router.get("/user_phone/:phone", users.findUserByPhoneNumber)
     router.post("/users_phone", users.addmoreinfo_phone)
