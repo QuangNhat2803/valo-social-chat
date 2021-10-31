@@ -273,33 +273,6 @@ exports.addNewUserApp = (async (req,resp) => {
 
 
 
-// router.post('/users/login')
-// Login user
-exports.login = (async (req, resp) => {
-    try {
-        const user = await User.findByCredentials(req.body.email, req.body.password, User, Token)
-        const token = await user.generateJsonWebToken(Token)
-        resp.send({ user, token })
-    } catch (error) {
-        resp.status(400).send({ 'error': error.message })
-    }
-
-})
-
-
-// router.post('/users/login_phone')
-// Login user phone
-exports.login_phone = (async (req, resp) => {
-    try {
-        const user = await User.findByCredentialsWithPhone(req.body.phone, req.body.password, User, Token)
-        const token = await user.generateJsonWebToken(Token)
-        resp.send({user,token})
-    } catch (error) {
-        resp.status(400).send({ 'error': error.message })
-    }
-
-})
-
 //router.get('/users/:mail')
 // valid email exists
 exports.checkvalid = (async (req, resp) => {
