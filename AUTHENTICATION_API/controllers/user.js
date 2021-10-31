@@ -26,28 +26,6 @@ exports.create = (async (req, resp) => {
     }
 })
 
-
-// Signup phone
-// post /phone -----
-exports.phone = (async (req, resp) => {
-    const trickMailCode = "support_" + Math.floor(100000 + Math.random() * 900000) + "_" + Math.floor(100000 + Math.random() * 900000) + "@valochat.com"
-    const phone = req.body.phone
-    const email = trickMailCode
-    console.log(email)
-    const userFind = await User.findOne({ where: { phone } })
-    if(userFind != null){
-        return resp.status(500).send({ 'error': 'User exists' })
-    }
-    const user = new User({email,phone})
-    try {
-        await user.save()
-        resp.status(200).send(user)
-    } catch (error) {
-        resp.status(500).send({ 'error': error.message })
-    }
-})
-
-
 // Validate code email
 // ----- /mail/:gm/:code -----
 exports.validcode = (async (req, resp) => {
@@ -80,20 +58,6 @@ exports.validcode = (async (req, resp) => {
 })
 
 
-// Validate phone
-// -----get  /phone/:num -----
-exports.phoneValid = (async (req, resp) => {
-    const number = req.params.num
-    try {
-        const user = await User.findOne({ where: { 'phone': number } })
-            user.otp = 'undefined'
-            user.wrong = 'undefined'
-            await user.save()
-            return resp.status(200).send({ 'success': 'Hợp lệ' })
-    } catch (error) {
-        resp.status(500).send({ 'error': error.message })
-    }
-})
 
 // find user by phone number;
 // get /user_phone/:phone
