@@ -1,5 +1,6 @@
-const sgMail = require('@sendgrid/mail')
-sgMail.setApiKey('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')
+require('dotenv').config({ path: __dirname + '/.env' });
+const sgMail = require('@sendgrid/mail');
+sgMail.setApiKey(process.env.ApiKey);
 
 const sendEmailValidCode = async(email,name) => {
     await sgMail.send({

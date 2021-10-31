@@ -12,12 +12,12 @@
   "dependencies": {
     "axios": "^0.20.0",
     "cookie-parser": "^1.4.5",
+    "dotenv": "^10.0.0",
     "express": "^4.17.1",
     "handlebars-paginate": "^0.1.0",
     "handlebars.moment": "^1.0.4",
     "hbs": "^4.1.1",
     "jsonwebtoken": "^8.5.1",
-    "qrcode": "^1.4.4",
     "socket.io": "^2.3.0",
     "uuid": "^8.3.1"
   },
