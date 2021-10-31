@@ -7,25 +7,7 @@ const Sequelize = db.Sequelize
 const BASE_LINK_USER = 'http://localhost:3000' // AUTHENTICATION_API
 
 
-// add Contact
-// post(/contact)
-exports.create = (async (req, resp) => {
-    const from = req.body.from
-    const to = req.body.to
-    const checkContact = await Contact.findOne({where:{[Op.or]: [{from_uid: from,to_uid:to}, {from_uid: to,to_uid:from}]}})
-    if(checkContact){
-        resp.status(500).send()
-    }else{
-        const contact = new Contact({ 'from_uid' : from, 'to_uid' : to })
-        try {
-            await contact.save()
-            resp.status(200).send(contact)
-        } catch (error) {
-            resp.status(500).send({ 'error': error.message })
-        }
-    }
-    
-})
+
 
 
 
