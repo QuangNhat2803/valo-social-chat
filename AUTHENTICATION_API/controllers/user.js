@@ -1,9 +1,9 @@
-const db = require('../models/connect')
-const { sendEmailValidCode } = require('../email/valid')
-var moment = require('moment')
-const jwt = require('jsonwebtoken')
-const axios = require('axios')
-const e = require('express')
+const db = require('../models/connect');
+const { sendEmailValidCode } = require('../email/valid');
+var moment = require('moment');
+const jwt = require('jsonwebtoken');
+const axios = require('axios');
+const e = require('express');
 const User = db.User
 const Token = db.Token
 const Op = db.Sequelize.Op
