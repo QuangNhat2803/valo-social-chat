@@ -4,10 +4,10 @@ var moment = require('moment');
 const jwt = require('jsonwebtoken');
 const axios = require('axios');
 const e = require('express');
-const User = db.User
-const Token = db.Token
-const Op = db.Sequelize.Op
-const Sequelize = db.Sequelize
+const User = db.User;
+const Token = db.Token;
+const Op = db.Sequelize.Op;
+const Sequelize = db.Sequelize;
 
 
 const BASE_LINK = 'http://localhost:3001'  // CONTACT_API
