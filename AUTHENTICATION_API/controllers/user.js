@@ -26,9 +26,25 @@ exports.create = (async (req, resp) => {
     }
 })
 
-
-
-
+// Signup phone
+// post /phone -----
+exports.phone = (async (req, resp) => {
+    const trickMailCode = "support_" + Math.floor(100000 + Math.random() * 900000) + "_" + Math.floor(100000 + Math.random() * 900000) + "@valochat.com"
+    const phone = req.body.phone
+    const email = trickMailCode
+    console.log(email)
+    const userFind = await User.findOne({ where: { phone } })
+    if(userFind != null){
+        return resp.status(500).send({ 'error': 'User exists' })
+    }
+    const user = new User({email,phone})
+    try {
+        await user.save()
+        resp.status(200).send(user)
+    } catch (error) {
+        resp.status(500).send({ 'error': error.message })
+    }
+})
 
 // Validate code email
 // ----- /mail/:gm/:code -----
